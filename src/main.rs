@@ -209,6 +209,10 @@ fn path_name(path: &Path) -> &'static str {
         Path::ApplicationGuildCommandId(..) => "Application command in guild",
         Path::InteractionCallback(..) => "Interaction callback",
         Path::StageInstances => "Stage instances",
+        Path::ChannelsIdMessagesIdThreads(_) => "Channel message threads",
+        Path::ChannelsIdThreadMembers(_) => "Channel thread members",
+        Path::ChannelsIdThreads(_) => "Channel threads",
+        Path::GuildsIdThreads(_) => "Guild threads",
         _ => "Unknown path!",
     }
 }
